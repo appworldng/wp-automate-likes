@@ -1,0 +1,1 @@
+<textarea style="width: 100%; border: 1px solid #069; padding: 0.75em; border-radius: 5px; color: #069;" rows="5" name="automate_styling" id="automate_styling"><?= get_option('automate_styling') ? get_option('automate_styling') : ''; ?></textarea>
