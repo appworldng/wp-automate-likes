@@ -57,7 +57,7 @@ class wpAutomateLikes {
 	public static function automateShortCode() {
 	    ob_start();
 	?>
-	    <span style="<?= get_option(automate_styling); ?>"><?= get_option(automate_value); ?></span>
+	    <span style="<?= get_option(automate_styling); ?>"><?= get_option(automate_likes); ?></span>
 	<?
     }
 	
@@ -68,9 +68,9 @@ class wpAutomateLikes {
 	 * @since  1.0.0
 	*/
     public static function registerAutomateSchedule() {
-		$increment = get_option(automate_incremnet) ? get_option(automate_incremnet) : 0;
-        $automate_value = get_option(automate_value) + $increment;
-    	update_option('automate_value', $automate_value);
+		$increment = get_option(automate_increment) ? get_option(automate_increment) : 0;
+        $automate_likes = get_option(automate_likes) + $increment;
+    	update_option('automate_likes', $automate_likes);
     }
     
     /**
