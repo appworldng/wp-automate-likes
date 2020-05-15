@@ -31,7 +31,7 @@
 	);
 
 	register_setting(
-		"section", "automate_value"
+		"section", "automate_likes"
 	);
 
 	register_setting(
