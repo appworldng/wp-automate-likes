@@ -68,7 +68,8 @@ class wpAutomateLikes {
 	 * @since  1.0.0
 	*/
     public static function registerAutomateSchedule() {
-        $automate_value = get_option(automate_value) + 100;
+		$increment = get_option(automate_incremnet) ? get_option(automate_incremnet) : 0;
+        $automate_value = get_option(automate_value) + $increment;
     	update_option('automate_value', $automate_value);
     }
     
@@ -83,8 +84,12 @@ class wpAutomateLikes {
 	    require_once('wp-automate-register-fields.php');
 	}
 
-	public static function admin_automate_value() {
-	    require_once('fields/automate-value.php');
+	public static function admin_automate_likes() {
+	    require_once('fields/automate-likes.php');
+	}
+
+	public static function admin_automate_increment() {
+	    require_once('fields/automate-increment.php');
 	}
 
 	public static function admin_automate_styling() {
